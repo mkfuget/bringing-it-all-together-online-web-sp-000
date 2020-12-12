@@ -6,7 +6,7 @@ class Dog
       CREATE TABLE dogs 
     SQL
     
-    db[:conn].execute(sql_create)
+    DB[:conn].execute(sql_create)
   end 
   
   def self.drop_table
