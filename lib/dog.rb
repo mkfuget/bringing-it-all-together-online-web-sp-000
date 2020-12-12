@@ -1,10 +1,10 @@
 class Dog 
   attr_accessor :name, :breed, :id 
   
-  def initialize(name, breed, id=nil)
-    @name = name 
-    @breed = breed 
-    @id = id 
+  def initialize(data_hash)
+    @name = data_hash[:name] 
+    @breed = data_hash[:breed] 
+    @id = data_hash[:id] 
   end 
   
   def self.create_table
