@@ -76,9 +76,12 @@ class Dog
     SQL
     dog = DB[:conn].execute(sql, data[:name], data[:breed])
     if !dog.empty 
-      create(data)
-    else 
+      dog_data = dog[0]
       
+    else 
+      create(data)
+    end
+
 
   end
 
