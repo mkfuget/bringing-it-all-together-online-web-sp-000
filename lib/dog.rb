@@ -81,8 +81,7 @@ class Dog
     else 
       dog = create(data)
     end
-
-
+    dog 
   end
 
 end
