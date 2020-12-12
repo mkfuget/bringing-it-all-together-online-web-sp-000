@@ -70,9 +70,12 @@ class Dog
   end 
 
   def self.find_or_create_by(data)
+    
     sql = <<-SQL
-      SELECT * FROM dogs WHERE id = ? LIMIT 1
+      SELECT * FROM dogs WHERE name = ?, breed = ? LIMIT 1
     SQL
+    
+    dog
 
   end
 
