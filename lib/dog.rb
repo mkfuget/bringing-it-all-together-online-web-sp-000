@@ -2,7 +2,7 @@ class Dog
   
   def self.create_table
     drop_table    
-    sql_create = <<-SQL 
+    sql_create = <<-SQL
       CREATE TABLE dogs
     SQL
     
@@ -10,8 +10,8 @@ class Dog
   end 
   
   def self.drop_table
-    sql_drop = <<-SQL 
-      DROP TABLE IF EXISTS dogs   
+    sql_drop = <<-SQL
+      DROP TABLE IF EXISTS dogs
     SQL
     
     DB[:conn].execute(sql_drop)
