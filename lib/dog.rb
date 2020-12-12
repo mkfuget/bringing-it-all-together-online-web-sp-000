@@ -36,7 +36,7 @@ class Dog
     SQL
     
     DB[:conn].execute(sql, self.name, self.id)
-    
-    
+    @id = 
+  end
 
 end
