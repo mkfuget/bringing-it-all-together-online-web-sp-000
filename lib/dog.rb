@@ -58,8 +58,12 @@ class Dog
       SELECT * FROM dogs WHERE name = ?
     SQL
     
-    DB[:conn].execute(sql, self.name, self.breed)
-
+    row_data = DB[:conn].execute(sql, self.name)
+    
+    row_data = row_data.map {|x| x}.first 
+    
+    out = new_from_db(row_data)
+    return out
   end 
 
 end
