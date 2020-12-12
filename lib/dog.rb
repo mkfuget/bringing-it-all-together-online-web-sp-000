@@ -10,7 +10,11 @@ class Dog
   def self.create_table
     drop_table    
     sql_create = <<-SQL
-      CREATE TABLE dogs
+      CREATE TABLE dogs (
+        name TEXT,
+        breed TEXT,
+        id INTEGER PRIMARY KEY
+      )
     SQL
     
     DB[:conn].execute(sql_create)
