@@ -52,5 +52,14 @@ class Dog
     out.save
     return out
   end
+  
+  def self.find_by_name(name)
+    sql = <<-SQL
+      
+    SQL
+    
+    DB[:conn].execute(sql, self.name, self.breed)
+
+  end 
 
 end
