@@ -41,11 +41,11 @@ class Dog
   end
   def self.new_from_db(data_row)
     hash = {
-      :name = data_row[1]
-      :breed = data_row[2]
-      :id = data_row[0]
+      :name => data_row[1],
+      :breed => data_row[2],
+      :id => data_row[0]
     }
-    Dog.new(data_row)
+    Dog.new(hash)
   end 
   def self.create(data_hash)
     
