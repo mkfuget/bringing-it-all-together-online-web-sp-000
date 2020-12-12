@@ -61,7 +61,7 @@ class Dog
     row_data = DB[:conn].execute(sql, name).map {|x| self.new_from_db(x)}.first
   end 
 
-  def self.find_by_name(name)
+  def self.find_by_id(id)
     sql = <<-SQL
       SELECT * FROM dogs WHERE name = ? LIMIT 1
     SQL
