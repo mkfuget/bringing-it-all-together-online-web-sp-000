@@ -17,4 +17,4 @@ class Dog
     db[:conn].execute(sql_drop)
   end
     
-    
+end
