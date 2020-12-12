@@ -60,10 +60,7 @@ class Dog
     
     row_data = DB[:conn].execute(sql, self.name)
     
-    row_data = row_data.map {|x| x}.first 
-    
-    out = new_from_db(row_data)
-    return out
+    row_data = row_data.map {|x| new_from_db(x)}.first 
   end 
 
 end
