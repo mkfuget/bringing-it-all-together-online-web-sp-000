@@ -74,7 +74,8 @@ class Dog
     sql = <<-SQL
       SELECT * FROM dogs WHERE name = ?, breed = ? 
     SQL
-    dog = DB[:conn].execute(sql, data[:name], data)
+    dog = DB[:conn].execute(sql, data[:name], data[:breed])
+    if(!dog)
 
   end
 
