@@ -75,7 +75,10 @@ class Dog
       SELECT * FROM dogs WHERE name = ?, breed = ? 
     SQL
     dog = DB[:conn].execute(sql, data[:name], data[:breed])
-    if(!dog)
+    if !dog.empty 
+      create(data)
+    else 
+      
 
   end
 
