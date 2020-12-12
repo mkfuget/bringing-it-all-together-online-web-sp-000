@@ -48,7 +48,9 @@ class Dog
     Dog.new(hash)
   end 
   def self.create(data_hash)
-    
+    out = Dog.new(data_hash)
+    out.save
+    return out
   end
 
 end
