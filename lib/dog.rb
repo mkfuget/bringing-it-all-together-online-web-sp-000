@@ -59,7 +59,6 @@ class Dog
     SQL
     
     row_data = DB[:conn].execute(sql, name).map {|x| self.new_from_db(x)}.first
-    puts row_data
   end 
 
 end
