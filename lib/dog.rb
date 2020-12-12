@@ -14,7 +14,7 @@ class Dog
       DROP TABLE IF EXISTS dogs 
     SQL
     
-    db[:conn].execute(sql_drop)
+    DB[:conn].execute(sql_drop)
   end
     
 end
